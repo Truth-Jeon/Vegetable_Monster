@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Main Page</title>
+    <style>
+        body{
+            background-color:#34A638;
+        }
+        a{
+            text-decoration: none !important;
+            color:white;
+        }
+        p{
+            color:white;
+            text-align:center;
+        }
+        address{
+            color:white;
+            text-align:center;
+        }
+        input{
+            vertical-align:middle;
+            position: fixed;
+            left:185px; top:27px;
+        }
+        input.form-text {
+            border: lpx solid #bcbcbc;
+            height:26px;
+        }
+        input.img-button{
+            background:url("images/돋보기.png") no-repeat;
+            border: none;
+            width:32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-block;
+            position:fixed;
+            left:353px;
+        }
+        ul li {list-style-type: none; display:inline-block; margin-left:20px;}
+        .top_bar{
+            background:#FFFFFF;
+            position: fixed;
+            left:0; top:0; right:0;
+            height: 90px;
+        }
+        .top_logo{
+            position: fixed;
+            left:0; top:3px; right:0;
+            display: inline-block;
+            text-align: center;
+        }
+        .top_menu{
+            background:#FF7900;
+            position: fixed;
+            left:0; top:90px; right:0;
+            height: 60px;
+            display: inline-block;
+            text-align: center;
+            font-size:18px;
+            word-spacing: 50px;
+        }
+    .container1{
+        text-align:center;
+        margin-top:160px;
+    }
+    .container2{
+        text-align:center;
+        margin-top:10px;
+    }
+    #container{
+        color:white;
+        float:left;
+    }
+    .itemName{
+        text-align: center;
+        font-size : 18px;
+        color:white;
+    }
+    .cntPrice{
+        text-align: center;
+        font-size : 12px;
+        text-decoration: line-through;
+        color:white;
+    }
+    .selPriceWrap{
+        padding:5px;
+    }
+    .selPrice{
+        text-align:center;
+        font-size:15px;
+        color:white;
+    }
+    .top_button{
+        float : right;
+        position: fixed;
+        top:15px; right:30px;
+    }
+    .footer{
+        display:block;
+        bottom:0;
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+        background:#34A638;
+    }
+    #footer_logo{
+        display:block;
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+    <div class="top_bar">
+    </div>
+    <div class="top_logo">
+        <a href="main.html"><img src="images/야채몬스터로고.png" alt="메인로고"></a>
+    </div>
+    <div class="top_button">
+                    <a href="login.html"><img src="images/로그인버튼.png" alt="로그인" border=0 vspace=3 hspace=3></a>
+                    <a href="basket.html"><img src="images/장바구니버튼.png" alt="장바구니" border=0 vspace=3 hspace=3></a>         
+    </div>
+    <form>
+        <p>
+        <input type="text" class="form-text">
+        <input type="button" class="img-button">
+        </p>
+    </form>
+    <div class="top_menu">
+        <ul>
+            <li><a href="">SALE</a></li>
+            <li><a href="">추천상품</a></li>
+            <li><a href="">신상품</a></li>
+            <li><a href="">인기상품</a></li>
+            <li><a href="">세트상품</a></li>
+        </ul>
+    </div>
+    <div class="container1">
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/방울양배추.jpg" alt="방울양배추" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">방울양배추</p>
+            <p><span class="cntPrice">38,900원</span>
+            <span class="selPriceWrap"><em class="selPrice">22,000원</em></span></p>
+        </div>
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/블루베리.jpg" alt="블루베리" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">블루베리</p>
+            <p><span class="cntPrice">45,000원</span>
+            <span class="selPriceWrap"><em class="selPrice">25,000원</em></span></p>
+        </div>
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/사과.jpg" alt="사과" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">사과</p>
+            <p><span class="cntPrice">35,000원</span>
+            <span class="selPriceWrap"><em class="selPrice">20,000원</em></span></p>
+        </div>
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/감자.jpg" alt="감자" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">감자</p>
+            <p><span class="cntPrice">35,000원</span>
+            <span class="selPriceWrap"><em class="selPrice">15,000원</em></span></p>
+        </div>
+    </div>
+    <div class="container2">
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/당근.jpg" alt="당근" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">당근</p>
+            <p><span class="cntPrice">18,000원</span>
+            <span class="selPriceWrap"><em class="selPrice">9,000원</em></span></p>
+        </div>
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/양파.jpg" alt="양파" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">양파</p>
+            <p><span class="cntPrice">18,000원</span>
+            <span class="selPriceWrap"><em class="selPrice">9,000원</em></span></p>
+        </div>
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/오이.jpg" alt="오이" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">오이</p>
+            <p><span class="cntPrice">15,000원</span>
+            <span class="selPriceWrap"><em class="selPrice">7,000원</em></span></p>
+        </div>
+        <div id="container">
+            <a href="" class="container">
+                <img src="images/완두콩.jpg" alt="완두콩" border=0 vspace=12 hspace=12>
+            </a>
+            <p class="itemName">완두콩</p>
+            <p><span class="cntPrice">12,000원</span>
+            <span class="selPriceWrap"><em class="selPrice">5,000원</em></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="footer_logo">
+            <a href="main.html"><img src="images/야채몬스터 로고.png" alt="야몬로고" border=0 vspace=12 hspace=12></a>
+        </div>
+        <ul>
+            <li><a href="">회사소개</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">입점문의</a></li>
+            <li><a href="">공지사항</a></li>
+        </ul>
+        <p>Copyright ⓒ 2021 Miss-O.co.,Ltd. Alrights reserved.</p>
+        <address>Contract webmaster for more information. 010-3402-0187</address>
+    </div>
+</body>
+</html>
