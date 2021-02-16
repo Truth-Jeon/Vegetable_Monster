@@ -12,11 +12,6 @@
             text-decoration: none !important;
             color:white;
         }
-        input{
-            vertical-align:middle;
-            position: fixed;
-            left:185px; top:27px;
-        }
         ul li {list-style-type: none; display:inline-block; margin-left:20px;}
         .top_bar{
             background:#FFFFFF;
@@ -40,17 +35,9 @@
             font-size:18px;
             word-spacing: 50px;
         }
-        .container1{
+    .container{
         text-align:center;
-        margin-top:160px;
-    }
-    .container2{
-        text-align:center;
-        margin-top:10px;
-    }
-    #container{
-        color:white;
-        float:left;
+        margin-top:200px;
     }
     .footer{
         display:block;
@@ -59,10 +46,7 @@
         margin:0 auto;
         text-align:center;
         background:#34A638;
-    }
-    #footer_logo{
-        display:block;
-        text-align:center;
+        color: white;
     }
     </style>
 </head>
@@ -71,10 +55,43 @@
     <div class="top_logo">
         <a href="main.html"><img src="images/야채몬스터로고.png" alt="메인로고"></a>
     </div>
-    <div class="top_menu"></div>
-    <div class="container1">
+    <div class="top_menu">
+        <ul>
+            <li><a href="">SALE</a></li>
+            <li><a href="">추천상품</a></li>
+            <li><a href="">신상품</a></li>
+            <li><a href="">인기상품</a></li>
+            <li><a href="">세트상품</a></li>
+        </ul>
     </div>
-    <div class="container2">
-    </div>    
+    <div class="container"><a href="main.html"><img src="images/야채몬스터로그인화면로고.jpg" alt="로그인화면메인로고"></a></div>
+    <table align="center" border="0" bgcolor="white" height="40" width="430" style="border:solid 4px #FF7900; margin-top:1%">
+    <td><input type="text" name="id" value="" style="height:40px; width:430px;"></td>
+    </table>
+    <table align="center" border="0" bgcolor="white" height="40" width="430" style="border:solid 4px #FF7900; margin-top:1%">
+    <td><input type="password" name="pw" value="" style="height:40px; width:430px;"></td>
+    </table>
+    <table align="center" height="40" style="margin-top:1%">
+    <tr>
+        <td><input type="button" name="login" value="로그인" style="height:50px; width:450px; background-color:#FF7900; color:white; font-size:16px; border:solid 1px #FF7900;"></td>
+    </tr>
+    </table>
+    <table align="center" height="50" style="margin-top:1%" class="mo">
+    <tr><td><a style="text-decoration:none;" href="join.html">회원가입 | </td>
+        <td><a style="text-decoration:none;" href="주소">아이디 찾기 | </td>
+        <td><a style="text-decoration:none;" href="주소">비밀번호 찾기</td></tr>
+    </table>
+    <table align="center" height="0" width="100%" border="1" style="border:solid 1px #FF7900; margin-top:4%"></table>
+    <div class="footer">
+        <ul>
+            <li><a href="">회사소개</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">입점문의</a></li>
+            <li><a href="">공지사항</a></li>
+        </ul>
+        <p>Copyright ⓒ 2021 Miss-O.co.,Ltd. Alrights reserved.</p>
+        <address>Contract webmaster for more information. 010-3402-0187</address>
+    </div>
 </body>
 </html>
