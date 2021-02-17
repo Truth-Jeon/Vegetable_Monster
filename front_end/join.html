@@ -9,6 +9,7 @@
         }
         table{
             margin : 0 auto;
+            border-spacing:15px;
         }
         .container{
         text-align:center;
@@ -19,43 +20,70 @@
         td{
             color: white;
         }
+        .footer{
+            display:block;
+            bottom:0;
+            width:100%;
+            margin:0 auto;
+            text-align:center;
+            background:#34A638;
+            color: white;
+        }
+        a{
+                text-decoration: none !important;
+                color:white;
+            }
+        ul li {list-style-type: none; display:inline-block; margin-left:20px;}
     </style>
+    <script language="Javascript">
+        function checkemail(){
+            if(form.email_select.value == '1') {
+                form.email2.readonly = false;
+                from.email2.value = '';
+                form.email2.focus();
+            }
+            else {
+                form.email2.readonly = true;
+                form.email2.value = form.email_select.value;
+            }
+        }
+    </script>
 </head>
 <body>
+    <table align="center" height="0" width="100%" border="1" style="border:solid 1px #34A638; margin-top:4%"></table>
     <div class="container"><a href="main.html"><img src="images/야채몬스터로그인화면로고.jpg" alt="로그인화면메인로고"></a></div>
-    <form name="write_form_member" method="post">
-        <table width="940" style="padding:5px 0 5px 0;">
+    <form name="form" method="post">
+        <table width="940" style="padding:5px 0 5px 0;" cellspacing = "1">
         <tr height="2" bgcolor="#FF7900"><td colspan="2"></td></tr>
+        <tr height="2" bgcolor="#34A638"><td colspan="5"></td></tr>
         <tr>
             <th>이름</th>
             <td><input type="text" name="username"></td>
         </tr>
         <tr>
             <th>주민등록번호</th>
-            <td><input type="text" name="ssn1"> - <input type="password" name="ssn2"></td>
+            <td><input type="text" name="ssn1" style="width:80px;"> - <input type="password" name="ssn2" style="width:80px;"></td>
         </tr>
         <tr>
             <th>아이디</th>
-            <td>
-                <input type="text" name="cursor:pointer">
-                <a href="#" style='cursor:help'>korea</a>
-            </td>
+            <td><input type="text" name="cursor:pointer" maxlength="20">
+                <input type="button" value="중복확인" style="background-color:#FF7900; color:white; border:solid 1px #FF7900; text-align:center;"/></td>
         </tr>
         <tr>
             <th>비밀번호</th>
-            <td><input type="password" name="passwd"> 영문/숫자 포함 8자리 이상</td>
+            <td><input type="password" name="passwd" maxlength="20"/> 영문/숫자 포함 8~20자 사이</td>
         </tr>
         <tr>
             <th>비밀번호 확인</th>
-            <td><input type="password" name="passwd_re"></td>
+            <td><input type="password" name="passwd_re"/></td>
         </tr>
         <tr>
            <th>이메일</th>
            <td>
-               <input type='text' name="email">@
-               <input type='text' name="email_dns">
-                    <select name="emailaddr">
-                        <option value="">직접입력</option>
+               <input type='text' name="email1" class="box" id="email1" size="15"> @
+               <input type='text' name="email2"class="box" id="email2" size="20">
+                    <select name="email_select" class="box" id="email_select" onChange="checkemail();">
+                        <option value="" selected>선택하세요</option>
                         <option value="daum.net">daum.net</option>
                         <option value="empal.com">empal.com</option>
                         <option value="gmail.com">gmail.com</option>
@@ -63,23 +91,25 @@
                         <option value="msn.com">msn.com</option>
                         <option value="naver.com">naver.com</option>
                         <option value="nate.com">nate.com</option>
+                        <option value="1">직접입력</option>
                     </select>
            </td>
         </tr>
         <tr>
             <th>주소</th>
             <td>
-                <input type="text" name="zip1"> - 
-                <input type="text" name="zip2">
-                <input type="text" name="addr1"><br>
-                <input type="text" name="addr2">
+                <input type="text" id="sample6_postcode" placeholder="우편번호">
+                <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="background-color:#FF7900; color:white;border:solid 1px #FF7900; text-align:center;"><br>
+                <input type="text" id="sample6_address" placeholder="주소"><br>
+                <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+                <input type="text" id="sample6_extraAddress" placeholder="참고항목">
             </td>
         </tr>
         <tr>
             <th>전화번호</th>
-            <td><input type="text" name="cell"> - 
-                <input type="text" name="tel1"> - 
-                <input type="text" name="tel2">
+            <td><input type="text" name="cell" maxlength="3" style="width:30px;"> - 
+                <input type="text" name="tel1" maxlength="4" style="width:40px;"> - 
+                <input type="text" name="tel2" maxlength="4" style="width:40px;">
             </td>
         </tr>
         <tr>
@@ -109,14 +139,27 @@
                 </select>
             </td>
         </tr>
+        <tr height="2" bgcolor="#34A638"><td colspan="5"></td></tr>
         <tr height="2" bgcolor="#FF7900"><td colspan="2"></td></tr>
         <tr>
             <td colspan="2" align="center">
-                <input type="submit" value="회원가입">
-                <input type="reset" value="취소">
+                <input type="submit" value="회원가입" style="height:25px; width:80px; background-color:#FF7900; color:white; font-size:15px; border:solid 1px #FF7900; text-align:center; margin-top:2%;"> 
+                <input type="reset" value="취소" style="height:25px; width:80px; background-color:#FF7900; color:white; font-size:15px; border:solid 1px #FF7900; text-align:center;margin-top:2%;">
             </td>
         </tr>
     </table>
+    <table align="center" height="0" width="100%" border="1" style="border:solid 1px #34A638; margin-top:3%;"></table>
     </form>
+    <div class="footer">
+        <ul>
+            <li><a href="">회사소개</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">입점문의</a></li>
+            <li><a href="">공지사항</a></li>
+        </ul>
+        <p>Copyright ⓒ 2021 Miss-O.co.,Ltd. Alrights reserved.</p>
+        <address>Contract webmaster for more information. kjklove0701@gmail.com</address>
+    </div>
 </body>
 </html>
